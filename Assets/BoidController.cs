@@ -6,6 +6,7 @@ using UnityEngine;
 [ExecuteAlways]
 public class BoidController : MonoBehaviour {
 
+    // [HideInInspector]
     public static float visionRadius = 4.0f;
     public static float viewAngle = 270.0f;
     public bool selected = false;
@@ -15,6 +16,7 @@ public class BoidController : MonoBehaviour {
     }
 
     void Update() {
+
         Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, visionRadius);
         if (Application.IsPlaying(gameObject)) {
             // Play logic
